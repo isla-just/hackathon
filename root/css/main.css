@@ -1,0 +1,20 @@
+.chapter{
+    padding: 1%;
+    margin:2%;
+}
+
+#question{
+    margin:2%;
+    font-weight: bold;
+}
+.option{
+    margin:2%;
+    border: solid;
+    width: fit-content;
+    padding: 3%;
+    display: inline-block;
+}
+.option:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
