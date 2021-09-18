@@ -35,7 +35,7 @@ $(()=>{
        var intervalId = window.setInterval(function(){
             var xmlhttp = new XMLHttpRequest();
             //url to communicate to localhost to get the values
-            var url = "http://localhost/hackathondb/readall.php?id=1";
+            var url = "http://www.owmakerspace.co.za/sevenWombats/readall.php?id=1";
 
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -45,6 +45,8 @@ $(()=>{
                         if(myArr.controlTest[0].location1 == 1) {
                             //use jquery to show first story. 
                             $("#story1").fadeIn();
+                            //http://www.owmakerspace.co.za/sevenWombats/updateChip.php?id=1&location1=1&...
+                            //http://www.owmakerspace.co.za/sevenWombats/updateInterface.php?id=1&led1=1&...
                         } else if(myArr.controlTest[0].location2 == 1) {
                             $("#story2").fadeIn();
                         } else if(myArr.controlTest[0].location3 == 1) {
@@ -64,18 +66,24 @@ $(()=>{
 
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="containerFluid">
 
             <!-- story1 -->
             <div class="illustration-card2"  id="story1">
                 
             <!--inserting illustration here-->
                 <div class="illustration"></div>
-                <audio controls autoplay>
-                    <!-- <source src="horse.ogg" type="audio/ogg">
-                    <source src="horse.mp3" type="audio/mpeg"> -->
+                <!-- <iframe src="audio/source.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+                </iframe>  -->
+
+                <div class="row">
+                    <audio controls autoplay>
+                    <source src="../assets/3. Village Story.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
                   </audio>
+                  <div class="next"><img src="../assets/chevron.svg"></img></div>
+                </div>
+     
 
             </div>
 
