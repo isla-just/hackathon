@@ -1,12 +1,14 @@
 $(function() {
-    var chapnum=1;
-    console.log("running");
     $(".chapter").hide();
     $(".movepiece").hide();
-   
+    
     $(".qna").hide();
     setTimeout(function(){$(".qna").show();},2000);
 
+    $(".startstory").on("click", function(){
+        $(".chapter-one").show();
+        $("intro").hide();
+    })
     $(".movespiece").on("click", function(){
         $(".movepiece").hide();
         if(chapnum===1){
@@ -45,31 +47,5 @@ $(function() {
     $(".chap1answer").on("click", function(){
         $(".chapter").hide();
         $(".movepiece").show();
-        chapnum=2;
-        console.log(chapnum)
-    })
-
-    $(".chap2answer").on("click", function(){
-        $(".chapter").hide();
-        $(".movepiece").show();
-        chapnum=3;
-    })
-
-    $(".chap3answer").on("click", function(){
-        $(".chapter").hide();
-        $(".movepiece").show();
-        chapnum=4;
-    })
-
-    $(".chap4answer").on("click", function(){
-        $(".chapter").hide();
-        $(".movepiece").show();
-        chapnum=5;
-    })
-
-    $(".chap5answer").on("click", function(){
-        $(".chapter").hide();
-        $(".movepiece").show();
-        chapnum=1;
     })
 })
