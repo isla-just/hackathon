@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+
 <html lang="eng-US">
     <head>
     <meta name="subject" content="Hackathon">
@@ -17,16 +21,58 @@
     <!--css-->
     <link rel="stylesheet" href="css/main.css">
     <!--link font selection - choose font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/gzr7kju.css">
 
     </head>
 
+<!-- 
     <script>
+        //SCRIPT CODE GET DATA FROM DB TO UPDATE THE INTERFACE
+       var intervalId = window.setInterval(function(){
+            var xmlhttp = new XMLHttpRequest();
+            //url to communicate to localhost to get the values
+            var url = "http://localhost/hackathon/readall.php?id=1";
 
-    </script>
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    console.log(myArr.controlTest[0]);
+
+                        if(myArr.controlTest[0].led1 == 1) {
+                            document.getElementById('led1').style.backgroundColor = "green";
+                        } else {
+                            document.getElementById('led1').style.backgroundColor = "red";
+                        }
+
+                        if(myArr.controlTest[0].led2 == 1) {
+                            document.getElementById('led2').style.backgroundColor = "green";
+                        } else {
+                            document.getElementById('led2').style.backgroundColor = "red";
+                        }
+
+                        if(myArr.controlTest[0].led3 == 1) {
+                            document.getElementById('led3').style.backgroundColor = "green";
+                        } else {
+                            document.getElementById('led3').style.backgroundColor = "red";
+                        }
+
+                        document.getElementById('led1').innerHTML= myArr.controlTest[0].led1 + " set";
+                         
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+        }, 5000);
+    </script> -->
 
     <body>
+
+        <div class="container-fluid">
+            <h1>Hi there!</h1>
+            <div class="illustration-card"></div>
+            <a href="pages/puzzle.html"><div class="button">Let's play</div></a>
+        </div>
 
         <div class="movepiece">
             <h1>Help the knight Continue his Story</h1>

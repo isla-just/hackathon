@@ -3,7 +3,7 @@ $(function() {
     console.log("running");
     $(".chapter").hide();
     $(".movepiece").hide();
-    $(".chapter-one").show();
+   
     $(".qna").hide();
     setTimeout(function(){$(".qna").show();},2000);
 
