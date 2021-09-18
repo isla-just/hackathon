@@ -16,122 +16,170 @@
     <!--bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/story.js"></script>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/adg8qsn.css">
 
 
     <script>
-$(()=>{
+//$(()=>{
 
-    console.log("working");
+    //console.log("working");
 
-    $("#story2").hide();
-        $("#story3").hide();
-        $("#story4").hide();
-        $("#story5").hide();
-});
+    //    $("#story2").hide();
+     //   $("#story3").hide();
+    //    $("#story4").hide();
+   //     $("#story5").hide();
+//});
 
         //SCRIPT CODE GET DATA FROM DB TO UPDATE THE INTERFACE
-       var intervalId = window.setInterval(function(){
-            var xmlhttp = new XMLHttpRequest();
+       //var intervalId = window.setInterval(function(){
+         //   var xmlhttp = new XMLHttpRequest();
             //url to communicate to localhost to get the values
-            var url = "http://localhost/hackathondb/readall.php?id=1";
+           // var url = "http://localhost/hackathondb/readall.php?id=1";
 
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    var myArr = JSON.parse(this.responseText);
-                    console.log(myArr.controlTest[0]);
+            //xmlhttp.onreadystatechange = function() {
+              //  if (this.readyState == 4 && this.status == 200) {
+                //    var myArr = JSON.parse(this.responseText);
+                  //  console.log(myArr.controlTest[0]);
 
-                        if(myArr.controlTest[0].location1 == 1) {
+                    //    if(myArr.controlTest[0].location1 == 1) {
                             //use jquery to show first story. 
-                            $("#story1").fadeIn();
-                        } else if(myArr.controlTest[0].location2 == 1) {
-                            $("#story2").fadeIn();
-                        } else if(myArr.controlTest[0].location3 == 1) {
-                            $("#story3").fadeIn();
-                        }else if(myArr.controlTest[0].location4 == 1) {
-                            $("#story4").fadeIn();
-                        } else {
-                            $("#story5").fadeIn();
-                        }
-                }
-            };
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
+                      //      $("#story1").fadeIn();
+                        //} else if(myArr.controlTest[0].location2 == 1) {
+                          //  $("#story2").fadeIn();
+                        //} else if(myArr.controlTest[0].location3 == 1) {
+                          //  $("#story3").fadeIn();
+                        //}else if(myArr.controlTest[0].location4 == 1) {
+                          //  $("#story4").fadeIn();
+                        //} else {
+                          //  $("#story5").fadeIn();
+                        //}
+               // }
+            //};
+            //xmlhttp.open("GET", url, true);
+            //xmlhttp.send();
 
-        }, 5000);
+        //}, 5000);
     </script>
 
     </head>
     <body>
         <div class="container-fluid">
 
-            <!-- story1 -->
-            <div class="illustration-card2"  id="story1">
-                
-            <!--inserting illustration here-->
-                <div class="illustration"></div>
-                <audio controls autoplay>
-                    <!-- <source src="horse.ogg" type="audio/ogg">
-                    <source src="horse.mp3" type="audio/mpeg"> -->
-                  Your browser does not support the audio element.
-                  </audio>
-
+            <div class="movepiece">
+                <h1>Help the knight Continue his Story</h1>
+                <div class="option movespiece">(placeholder button. Will be replaced by child moving the piece)</div>
             </div>
 
+            <div class="chapter chapter-one" id="chapter1">
+                <h1 id="chapterTitle">Chapter One</h1>
+
+                <div class="chaptercontent">
+                    <div class="animation"></div>
+                    <audio controls autoplay>
+                        <!-- <source src="horse.ogg" type="audio/ogg">
+                        <source src="horse.mp3" type="audio/mpeg"> -->
+                      Your browser does not support the audio element.
+                      </audio>
+                </div>
+    
+                <div class="qna">
+                    <p id="question">Who Should Go Warn The King?</p>
+                    <div class="option chap1answer" id="knight"></div>
+                    <div class="option wrong" id="donkey"></div>
+                    <div class="option wrong" id="snake"></div>
+                </div>
+            </div>
+
+            <!-- story1 -->
+
+            <div class="chapter chapter-two" id="chapter2">
+                <h1 id="chapterTitle">Chapter Two</h1>
+
+                <div class="chaptercontent">
+                    <div class="animation"></div>
+                    <audio controls autoplay>
+                        <!-- <source src="horse.ogg" type="audio/ogg">
+                        <source src="horse.mp3" type="audio/mpeg"> -->
+                      Your browser does not support the audio element.
+                      </audio>
+                </div>
+    
+                <div class="qna">
+                    <p id="question">What Can the Knight do to stop the fires</p>
+    
+                    <div class="option chap2answer" id="bucket"></div>
+                    <div class="option wrong" id="axe"></div>
+                    <div class="option wrong" id="sleep"></div>
+                </div>
+    
+    
+            </div>
              <!-- story2 -->
-             <div class="illustration-card2"  id="story2">
-                
-                <!--inserting illustration here-->
-                    <div class="illustration "></div>
+
+             <div class="chapter chapter-three" id="chapter3">
+                <h1 id="chapterTitle">Chapter Three</h1>
+
+                <div class="chaptercontent">
+                    <div class="animation"></div>
                     <audio controls autoplay>
                         <!-- <source src="horse.ogg" type="audio/ogg">
                         <source src="horse.mp3" type="audio/mpeg"> -->
                       Your browser does not support the audio element.
                       </audio>
-    
                 </div>
+    
+                <div class="qna">
+                    <p id="question">What has a Head and a Tail but No Body</p>
+                    <div class="option chap3answer" id="coin"></div>
+                    <div class="option wrong" id="bucket"></div>
+                    <div class="option wrong" id="donkey"></div>
+                </div>
+    
+            </div>
+            <!--story3-->
 
-                 <!-- story3 -->
-            <div class="illustration-card2"  id="story3">
-                
-                <!--inserting illustration here-->
-                    <div class="illustration"></div>
+            <div class="chapter chapter-four" id="chapter4">
+                <h1 id="chapterTitle">Chapter Four</h1>
+
+                <div class="chaptercontent">
+                    <div class="animation"></div>
                     <audio controls autoplay>
                         <!-- <source src="horse.ogg" type="audio/ogg">
                         <source src="horse.mp3" type="audio/mpeg"> -->
                       Your browser does not support the audio element.
                       </audio>
-    
                 </div>
-
+    
+                <div class="qna">
+                    <p id="question">How Could the Knight Get Past the Goblins</p>
+                    <div class="option chap4answer" id="shout"></div>
+                    <div class="option wrong" id="sleep"></div>
+                    <div class="option wrong" id="axe"></div>
+                </div>
+    
+            </div>
                  <!-- story4 -->
-            <div class="illustration-card2"  id="story4">
-                
-                <!--inserting illustration here-->
-                    <div class="illustration"></div>
+            <div class="chapter chapter-five" id="chapter5">
+                <h1 id="chapterTitle">Chapter Five</h1>
+                <div class="chaptercontent">
+                    <div class="animation"></div>
                     <audio controls autoplay>
                         <!-- <source src="horse.ogg" type="audio/ogg">
                         <source src="horse.mp3" type="audio/mpeg"> -->
                       Your browser does not support the audio element.
                       </audio>
-    
                 </div>
 
+    
+                <div class="qna">
+                    <p id="question">Attack the Dragon With The Sword</p>
+                    <div class="option chap5answer" id="attack">Right Button</div>
+                </div>
+            </div>
                  <!-- story5 -->
-            <div class="illustration-card2"  id="story5">
-                
-                <!--inserting illustration here-->
-                    <div class="illustration"></div>
-                    <audio controls autoplay>
-                        <!-- <source src="horse.ogg" type="audio/ogg">
-                        <source src="horse.mp3" type="audio/mpeg"> -->
-                      Your browser does not support the audio element.
-                      </audio>
-    
-                </div>
-
-                <div class="nav-bottom"></div>
+            
             
         </div><!--container fluid-->
 

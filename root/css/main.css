@@ -10,6 +10,7 @@
     text-align: center;
 
 
+
     font-weight: 600;
     box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
 -webkit-box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
@@ -26,21 +27,77 @@
     font-weight: bold;
 }
 .option{
+    text-align: start;
     margin:2%;
     border: solid;
-    width: fit-content;
-    padding: 3%;
+    border-color: white;
+    border-radius: 30px;
+    width: 150px;
+    height: 150px;
+    padding: 12px;
     display: inline-block;
+    backdrop-filter: blur(100px);
+    background-color: white;
+    box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0);
+}
+#axe{
+    background-image: url(../assets/Button-axe.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#bucket{
+    background-image: url(../assets/Button-bucket.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#coin{
+    background-image: url(../assets/Button-coin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#donkey{
+    background-image: url(../assets/Button-donkey.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#knight{
+    background-image: url(../assets/Button-knight.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#shout{
+    background-image: url(../assets/Button-shout.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#sleep{
+    background-image: url(../assets/Button-sleep.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#snake{
+    background-image: url(../assets/Button-snake.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .option:hover{
     cursor: pointer;
     font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.438);
+    color: black;
+}
+.intro{
+    height: 100%;
+    background-image: url(
+        ../assets/background.jpg
+    );
 }
 
 body{
-    background-color:white;
     height:100vh;
     overflow: hidden;
+    background-size: cover;
 }
 
 .html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, .row, .col, div, a, .container-fluid{
@@ -96,13 +153,13 @@ a{
 -moz-box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
 }
 
-.background-illustration{
+/*.background-illustration{
     width:100%;
     height:100vh;
     background-image: url(../assets/background.jpg);
     background-position: center;
     background-size:cover;
-}
+}*/
 
 
 
