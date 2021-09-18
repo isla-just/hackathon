@@ -36,7 +36,11 @@
        //var intervalId = window.setInterval(function(){
          //   var xmlhttp = new XMLHttpRequest();
             //url to communicate to localhost to get the values
+<<<<<<< HEAD
            // var url = "http://localhost/hackathondb/readall.php?id=1";
+=======
+            var url = "http://localhost/hackathondb/readall.php?id=1";
+>>>>>>> parent of 6c7c38d (story added)
 
             //xmlhttp.onreadystatechange = function() {
               //  if (this.readyState == 4 && this.status == 200) {
@@ -45,6 +49,7 @@
 
                     //    if(myArr.controlTest[0].location1 == 1) {
                             //use jquery to show first story. 
+<<<<<<< HEAD
                       //      $("#story1").fadeIn();
                         //} else if(myArr.controlTest[0].location2 == 1) {
                           //  $("#story2").fadeIn();
@@ -61,11 +66,43 @@
             //xmlhttp.send();
 
         //}, 5000);
+=======
+                            $("#story1").fadeIn();
+                        } else if(myArr.controlTest[0].location2 == 1) {
+                            $("#story2").fadeIn();
+                        } else if(myArr.controlTest[0].location3 == 1) {
+                            $("#story3").fadeIn();
+                        }else if(myArr.controlTest[0].location4 == 1) {
+                            $("#story4").fadeIn();
+                        } else {
+                            $("#story5").fadeIn();
+                        }
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+        }, 5000);
+>>>>>>> parent of 6c7c38d (story added)
     </script>
 
     </head>
     <body>
         <div class="container-fluid">
+<<<<<<< HEAD
+=======
+
+            <!-- story1 -->
+            <div class="illustration-card2"  id="story1">
+                
+            <!--inserting illustration here-->
+                <div class="illustration"></div>
+                <audio controls autoplay>
+                    <!-- <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg"> -->
+                  Your browser does not support the audio element.
+                  </audio>
+>>>>>>> parent of 6c7c38d (story added)
 
             <div class="movepiece">
                 <h1>Help the knight Continue his Story</h1>
