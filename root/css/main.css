@@ -1,3 +1,22 @@
+
+ .button{
+    margin-top:500px;
+    margin-left: 10%;
+    width:80%;
+    padding: 12px;
+    border-radius: 30px;
+    background-color:white;
+    color: #292f6a;
+    text-align: center;
+
+
+
+    font-weight: 600;
+    box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+-webkit-box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+ }
+ 
 .chapter{
     padding: 1%;
     margin:2%;
@@ -8,13 +27,158 @@
     font-weight: bold;
 }
 .option{
+    text-align: start;
     margin:2%;
     border: solid;
-    width: fit-content;
-    padding: 3%;
+    border-color: white;
+    border-radius: 30px;
+    width: 150px;
+    height: 150px;
+    padding: 12px;
     display: inline-block;
+    backdrop-filter: blur(100px);
+    background-color: white;
+    box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0);
+}
+#axe{
+    background-image: url(../assets/Button-axe.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#bucket{
+    background-image: url(../assets/Button-bucket.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#coin{
+    background-image: url(../assets/Button-coin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#donkey{
+    background-image: url(../assets/Button-donkey.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#knight{
+    background-image: url(../assets/Button-knight.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#shout{
+    background-image: url(../assets/Button-shout.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#sleep{
+    background-image: url(../assets/Button-sleep.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#snake{
+    background-image: url(../assets/Button-snake.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .option:hover{
     cursor: pointer;
     font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.438);
+    color: black;
 }
+.intro{
+    height: 100%;
+    background-image: url(
+        ../assets/background.jpg
+    );
+}
+
+body{
+    height:100vh;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, .row, .col, div, a, .container-fluid{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.container-fluid{
+    width: 100%;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+ a:hover{
+    text-decoration: none;
+ }
+
+ h1{
+     color:#292f6a;
+     font-family: 'Futura','sans-serif';
+     text-align: center;
+     width: 100%;
+     margin-top: 60px;
+ }
+
+ .illustration-card{
+     width:80%;
+     height:65vh;
+     background-color: white;
+     border-radius: 20px;
+     margin-left: 10%;
+     margin-top:5vh;
+
+     box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+-webkit-box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+ }
+
+ .illustration-card2{
+    width:80%;
+    height:65vh;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-top:18vh;
+
+    box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+-webkit-box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 1px 5px 16px 0px rgba(0,0,0,0.3);
+}
+
+/*.background-illustration{
+    width:100%;
+    height:100vh;
+    background-image: url(../assets/background.jpg);
+    background-position: center;
+    background-size:cover;
+}*/
+
+
+
+
+ .nav-bottom{
+     width:100%;
+     height:50px;
+     border-radius: 20px 20px 0px 0px;
+     background-color:#7699a1;
+     margin-top: 58px;
+ }
+
+ .logo-container{
+     width:100px;
+     height:100px;
+     background-image: url(../assets/white\ logo-02.png);
+     background-position: center;
+     background-size:cover;
+     float: right;
+     margin-top: 10px;
+     margin-right: 20px;
+ }
