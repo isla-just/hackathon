@@ -35,7 +35,7 @@ $(()=>{
        var intervalId = window.setInterval(function(){
             var xmlhttp = new XMLHttpRequest();
             //url to communicate to localhost to get the values
-            var url = "http://localhost/hackathon/readall.php?id=1";
+            var url = "http://localhost/hackathondb/readall.php?id=1";
 
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
